@@ -22,8 +22,4 @@ if __name__ == '__main__':
             ORDER BY meals_sold DESC;  -- order by the number of meals sold in descending order
     """)
 
-    for row in cursor.fetchall():
-        print(row)
-
-    cursor.close()
-    mydb.close()
+    print(', '.join(str(row) for row in cursor.fetchall()))

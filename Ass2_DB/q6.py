@@ -12,3 +12,5 @@ if __name__ == 'main':
         ALTER TABLE menu_meal ADD raw_cost INT; 
     """)
     mydb.commit()
+    cursor.close()
+    mydb.close()
